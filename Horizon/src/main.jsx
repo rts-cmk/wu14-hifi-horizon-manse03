@@ -49,7 +49,7 @@ const HomePage = () => (
           </div>
           <h3 className="product-card__title">Auralic Aries G2.1 Streamer (Digital Output)</h3>
           <p className="product-card__price">£ 4,799.00</p>
-          <button className="product-card__btn">Read more</button>
+          <Link to="/shop" className="product-card__btn">Read more</Link>
         </article>
       </div>
     </section>
@@ -85,7 +85,7 @@ createRoot(document.getElementById('root')).render(
             </a>
           </div>
         </div>
-      </nav>
+      </nav>      
       
       <Routes>
         <Route path="/" element={
@@ -100,7 +100,28 @@ createRoot(document.getElementById('root')).render(
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
+
+        <section className="blackbox">
+          <div className="blackbox__inner">
+          <h2 className="blackbox__title">What we do</h2>
+          <h2 className="blackbox_title2">Opening hours</h2>
+          <p className="blackbox__text">
+            We look forward to customising a system to meet your needs. <br /> <br />
+            We don’t favour one manufacturer over another – the only thing we do <br /> favour is making sure our customers get the right product that suits their <br /> needs
+            and listening preferences. We will ask many questions in order to <br /> ensure that what you buy from us is tailored to you and you alone. <br /> <br />
+
+            If you are looking for a product not found in our demonstration showrooms <br /> or our online site, don’t fret as we have access to hundreds of brands. <br /> <br />
+
+            One of our biggest pleasures of working in this industry is to see the smile on <br /> our customers’ faces when they finally hear and see the system of their <br /> dreams.
+          </p>
+          
+          <p className="blackbox_text2">dsasdasdasd</p>
+        </div>
+      </section>
+
     </Router>
   </StrictMode>
 );
+
+
 

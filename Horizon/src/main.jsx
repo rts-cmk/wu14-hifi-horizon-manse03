@@ -8,6 +8,7 @@ import Shop from './shop.jsx';
 import AboutUs from './about-us.jsx';
 import ContactUs from './contact-us.jsx';
 // import { ImFacebook2 } from "react-icons/im";
+// import { FaTwitter } from "react-icons/fa";
 
 // Produkter på forsiden
 const HomePage = () => (

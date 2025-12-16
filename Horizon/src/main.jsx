@@ -7,8 +7,16 @@ import App from './App.jsx';
 import Shop from './shop.jsx';
 import AboutUs from './about-us.jsx';
 import ContactUs from './contact-us.jsx';
-// import { ImFacebook2 } from "react-icons/im";
-// import { FaTwitter } from "react-icons/fa";
+import Login from './login.jsx';
+
+import { 
+  FaFacebookSquare, 
+  FaInstagramSquare, 
+  FaTwitterSquare, 
+  FaYoutubeSquare, 
+  FaPhone 
+} from "react-icons/fa";
+
 
 // Produkter på forsiden
 const HomePage = () => (
@@ -73,37 +81,51 @@ const HomePage = () => (
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
-      <nav className="navbar">
-        <div className="navbar__container">
-          <Link to="/" className="navbar__logo">
-            <img src="/Images/logo.png" alt="HI-FI Logo" />
-          </Link>
+<nav className="navbar">
+  <div className="navbar__container">
 
-          <ul className="navbar__menu">
-            <li className="navbar__item"><Link to="/shop" className="navbar__link">SHOP</Link></li>
-            <li className="navbar__item"><Link to="/about-us" className="navbar__link">ABOUT US</Link></li>
-            <li className="navbar__item"><Link to="/contact-us" className="navbar__link">CONTACT US</Link></li>
-          </ul>
+    <Link to="/" className="navbar__logo">
+      <img src="/Images/logo.png" alt="HI-FI Logo" />
+    </Link>
 
-          <div className="navbar__icons">
-            <div className="navbar__search-container">
-              <input type="text" className="navbar__search" placeholder="Search product..." />
-              <button className="navbar__search-btn">
-                <img src="/Images/search.png" alt="Search" />
-              </button>
-            </div>
+    <ul className="navbar__menu">
+      <li className="navbar__item">
+        <Link to="/shop" className="navbar__link">SHOP</Link>
+      </li>
+      <li className="navbar__item">
+        <Link to="/about-us" className="navbar__link">ABOUT US</Link>
+      </li>
+      <li className="navbar__item">
+        <Link to="/contact-us" className="navbar__link">CONTACT US</Link>
+      </li>
+    </ul>
 
-            <a href="#account" className="navbar__icon navbar__icon--profile">
-              <img src="/Images/profile.png" alt="Profile" />
-            </a>
+    <div className="navbar__icons">
 
-            <a href="#cart" className="navbar__icon navbar__icon--cart">
-              <img src="/Images/shoppingcart.png" alt="Shopping Cart" />
-              <span className="navbar__badge">0</span>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <div className="navbar__search-container">
+        <input
+          type="text"
+          className="navbar__search"
+          placeholder="Search product..."
+        />
+        <button className="navbar__search-btn">
+          <img src="/Images/search.png" alt="Search" />
+        </button>
+      </div>
+
+      <Link to="/login" className="navbar__icon navbar__icon--profile">
+        <img src="/Images/profile.png" alt="Profile" />
+      </Link>
+
+      <a href="#cart" className="navbar__icon navbar__icon--cart">
+        <img src="/Images/shoppingcart.png" alt="Shopping Cart" />
+        <span className="navbar__badge">0</span>
+      </a>
+
+    </div>
+  </div>
+</nav>
+
 
       {/* ROUTES */}
       <Routes>
@@ -176,49 +198,62 @@ createRoot(document.getElementById('root')).render(
               </section>
 
               {/* Footer */}
-              <footer className="footer">
-                <div className="footer__top">
-                  <div className="footer__column">
-                    <Link to="/" className="footer__link">Home</Link>
-                    <Link to="/shop" className="footer__link">Shop</Link>
-                    <Link to="/about-us" className="footer__link">About Us</Link>
-                  </div>
+<footer className="footer">
+  <div className="footer__top">
+    {/* Column 1: Links */}
+    <div className="footer__column">
+      <Link to="/" className="footer__link">Home</Link>
+      <Link to="/shop" className="footer__link">Shop</Link>
+      <Link to="/about-us" className="footer__link">About Us</Link>
+    </div>
 
-                  <div className="footer__column">
-                    <Link to="/returns" className="footer__link">Returns & Refunds</Link>
-                    <Link to="/delivery" className="footer__link">Delivery</Link>
-                    <Link to="/privacy" className="footer__link">Privacy Policy</Link>
-                    <Link to="/terms" className="footer__link">Terms & Conditions</Link>
-                  </div>
+    {/* Column 2: Policies */}
+    <div className="footer__column">
+      <Link to="/returns" className="footer__link">Returns & Refunds</Link>
+      <Link to="/delivery" className="footer__link">Delivery</Link>
+      <Link to="/privacy" className="footer__link">Privacy Policy</Link>
+      <Link to="/terms" className="footer__link">Terms & Conditions</Link>
+    </div>
 
-                  <div className="footer__column">
-                    <strong>Contact</strong>
-                    <p>2 Joppa Rd, Edinburgh, EH15 2EU</p>
-                    <p>📞 0131 556 7901</p>
-                    <p>44 Cow Wynd, Falkirk, Central Region, FK1 1PU</p>
-                    <p>📞 01324 629 011</p>
-                    <div className="footer__icons">
-                      <a href="#"><img src="/Images/facebook.png" alt="Facebook" /></a>
-                      <a href="#"><img src="/Images/twitter.png" alt="Twitter" /></a>
-                      <a href="#"><img src="/Images/instagram.png" alt="Instagram" /></a>
-                      <a href="#"><img src="/Images/youtube.png" alt="YouTube" /></a>
-                    </div>
-                  </div>
-                </div>
+    {/* Column 3: Contact + Social Icons */}
+    <div className="footer__column">
+      <strong>Contact</strong>
+      <p>2 Joppa Rd, Edinburgh, EH15 2EU</p>
+      <p><FaPhone style={{ marginRight: "5px" }} />0131 556 7901</p>
+      <p>44 Cow Wynd, Falkirk, FK1 1PU</p>
+      <p><FaPhone style={{ marginRight: "5px" }} />01324 629 011</p>
 
-                {/*-- Footer bottom --*/}
-                <div className="footer__bottom">
-                  <div className="payment-icons">
-                    <img src="/Images/stripe.png" alt="Stripe" />
-                    <img src="/Images/visa.png" alt="Visa" />
-                    <img src="/Images/mastercard.png" alt="Mastercard" />
-                  </div>
-                  <div>
-                    HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br/>
-                    Designed by WU07 :)
-                  </div>
-                </div>
-              </footer>
+      <div className="footer__icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebookSquare size={28} />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitterSquare size={28} />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagramSquare size={28} />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <FaYoutubeSquare size={28} />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Footer bottom */}
+  <div className="footer__bottom">
+    <div className="payment-icons">
+      <img src="/Images/stripe.png" alt="Stripe" />
+      <img src="/Images/visa.png" alt="Visa" />
+      <img src="/Images/mastercard.png" alt="Mastercard" />
+    </div>
+    <div>
+      HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
+      Designed by WU07 :)
+    </div>
+  </div>
+</footer>
+
             </>
           }
         />
@@ -227,6 +262,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/shop" element={<Shop />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   </StrictMode>

@@ -1,0 +1,120 @@
+.login-page {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+
+  &__title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #4a5568;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.login-box {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &__create-btn {
+    background: #ff6a00;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: #e55d00;
+    }
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  label {
+    font-size: 0.85rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    span {
+      color: red;
+    }
+
+    input {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      background: #f0f0f0;
+    }
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+  }
+
+  .remember-me {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__btn {
+    background: #ff6a00;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+      background: #e55d00;
+    }
+  }
+
+  &__forgot {
+    font-size: 0.8rem;
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

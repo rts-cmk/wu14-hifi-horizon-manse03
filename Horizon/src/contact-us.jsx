@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sass/contact-us.scss";
+import { 
+  FaFacebookSquare, 
+  FaInstagramSquare, 
+  FaTwitterSquare, 
+  FaYoutubeSquare, 
+  FaPhone 
+} from "react-icons/fa";
 
 // =====================
 // Contact Form Page
@@ -71,7 +78,7 @@ export default function ContactForm() {
           </FormGroup>
 
           <div className="form-actions">
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
           </div>
         </form>
       </section>
@@ -107,51 +114,61 @@ function FormGroup({ label, required, children }) {
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__top">
-        <div className="footer__column">
-          <Link to="/" className="footer__link">Home</Link>
-          <Link to="/shop" className="footer__link">Shop</Link>
-          <Link to="/about-us" className="footer__link">About Us</Link>
-        </div>
+<footer className="footer">
+  <div className="footer__top">
+    {/* Column 1: Links */}
+    <div className="footer__column">
+      <Link to="/" className="footer__link">Home</Link>
+      <Link to="/shop" className="footer__link">Shop</Link>
+      <Link to="/about-us" className="footer__link">About Us</Link>
+    </div>
 
-        <div className="footer__column">
-          <Link to="/returns" className="footer__link">Returns & Refunds</Link>
-          <Link to="/delivery" className="footer__link">Delivery</Link>
-          <Link to="/privacy" className="footer__link">Privacy Policy</Link>
-          <Link to="/terms" className="footer__link">Terms & Conditions</Link>
-        </div>
+    {/* Column 2: Policies */}
+    <div className="footer__column">
+      <Link to="/returns" className="footer__link">Returns & Refunds</Link>
+      <Link to="/delivery" className="footer__link">Delivery</Link>
+      <Link to="/privacy" className="footer__link">Privacy Policy</Link>
+      <Link to="/terms" className="footer__link">Terms & Conditions</Link>
+    </div>
 
-        <div className="footer__column">
-          <strong>Contact</strong>
-          <p>2 Joppa Rd, Edinburgh, EH15 2EU</p>
-          <p>📞 0131 556 7901</p>
-          <p>44 Cow Wynd, Falkirk, FK1 1PU</p>
-          <p>📞 01324 629 011</p>
+    {/* Column 3: Contact + Social Icons */}
+    <div className="footer__column">
+      <strong>Contact</strong>
+      <p>2 Joppa Rd, Edinburgh, EH15 2EU</p>
+      <p><FaPhone style={{ marginRight: "5px" }} />0131 556 7901</p>
+      <p>44 Cow Wynd, Falkirk, FK1 1PU</p>
+      <p><FaPhone style={{ marginRight: "5px" }} />01324 629 011</p>
 
-          <div className="footer__icons">
-            <a href="#"><img src="/Images/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="/Images/twitter.png" alt="Twitter" /></a>
-            <a href="#"><img src="/Images/instagram.png" alt="Instagram" /></a>
-            <a href="#"><img src="/Images/youtube.png" alt="YouTube" /></a>
-          </div>
-        </div>
+      <div className="footer__icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebookSquare size={28} />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitterSquare size={28} />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagramSquare size={28} />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <FaYoutubeSquare size={28} />
+        </a>
       </div>
+    </div>
+  </div>
 
-      <div className="footer__bottom">
-        <div className="payment-icons">
-          <img src="/Images/stripe.png" alt="Stripe" />
-          <img src="/Images/visa.png" alt="Visa" />
-          <img src="/Images/mastercard.png" alt="Mastercard" />
-        </div>
+  {/* Footer bottom */}
+  <div className="footer__bottom">
+    <div className="payment-icons">
+      <img src="/Images/stripe.png" alt="Stripe" />
+      <img src="/Images/visa.png" alt="Visa" />
+      <img src="/Images/mastercard.png" alt="Mastercard" />
+    </div>
+    <div>
+      HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
+      Designed by WU07 :)
+    </div>
+  </div>
+</footer>
 
-        <div className="footer__legal">
-          HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238.
-          Registered office: 2 Joppa Rd, Edinburgh EH15 2EU
-          <br />
-          Designed by WU07 :)
-        </div>
-      </div>
-    </footer>
   );
 }

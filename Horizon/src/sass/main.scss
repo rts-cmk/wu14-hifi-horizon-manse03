@@ -1,3 +1,27 @@
+/* Regular variable font */
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic variable font */
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Italic-VariableFont_wdth,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Global font */
+html,
+body {
+  font-family: "OpenSans", Arial, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
@@ -270,7 +294,6 @@ html, body, #root {
 }
 
 
-
 .blackbox {
   padding: 4rem 0;
   display: flex;
@@ -407,7 +430,19 @@ html, body, #root {
 
   &__icons {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
+
+    svg {
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+      transition: color 0.3s ease;
+    }
+
+    svg:hover {
+      color: #FF6900;
+    }
   }
 
   &__bottom {
@@ -433,6 +468,3 @@ html, body, #root {
     }
   }
 }
-
-
-

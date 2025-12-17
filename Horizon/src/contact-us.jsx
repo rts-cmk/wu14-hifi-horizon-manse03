@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sass/contact-us.scss";
 import { 
+  FaStripe, 
+  FaCcVisa, 
+  FaCcMastercard 
+} from "react-icons/fa";
+import { 
   FaFacebookSquare, 
   FaInstagramSquare, 
   FaTwitterSquare, 
@@ -157,17 +162,17 @@ function Footer() {
   </div>
 
   {/* Footer bottom */}
-  <div className="footer__bottom">
-    <div className="payment-icons">
-      <img src="/Images/stripe.png" alt="Stripe" />
-      <img src="/Images/visa.png" alt="Visa" />
-      <img src="/Images/mastercard.png" alt="Mastercard" />
-    </div>
-    <div>
-      HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
-      Designed by WU07 :)
-    </div>
+<div className="footer__bottom">
+  <div className="payment-icons">
+    <FaStripe size={28} style={{ color: "#fff" }} />
+    <FaCcVisa size={28} style={{ color: "#fff" }} />
+    <FaCcMastercard size={28} style={{ color: "#fff" }} />
   </div>
+  <div>
+    HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
+    Designed by WU07 :)
+  </div>
+</div>
 </footer>
 
   );

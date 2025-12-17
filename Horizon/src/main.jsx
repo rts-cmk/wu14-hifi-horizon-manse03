@@ -8,7 +8,12 @@ import Shop from './shop.jsx';
 import AboutUs from './about-us.jsx';
 import ContactUs from './contact-us.jsx';
 import Login from './login.jsx';
-
+import Account from "./account.jsx";
+import { 
+  FaStripe, 
+  FaCcVisa, 
+  FaCcMastercard 
+} from "react-icons/fa";
 import { 
   FaFacebookSquare, 
   FaInstagramSquare, 
@@ -240,18 +245,18 @@ createRoot(document.getElementById('root')).render(
     </div>
   </div>
 
-  {/* Footer bottom */}
-  <div className="footer__bottom">
-    <div className="payment-icons">
-      <img src="/Images/stripe.png" alt="Stripe" />
-      <img src="/Images/visa.png" alt="Visa" />
-      <img src="/Images/mastercard.png" alt="Mastercard" />
-    </div>
-    <div>
-      HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
-      Designed by WU07 :)
-    </div>
+{/* Footer bottom */}
+<div className="footer__bottom">
+  <div className="payment-icons">
+    <FaStripe size={28} style={{ color: "#fff" }} />
+    <FaCcVisa size={28} style={{ color: "#fff" }} />
+    <FaCcMastercard size={28} style={{ color: "#fff" }} />
   </div>
+  <div>
+    HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049238. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU<br />
+    Designed by WU07 :)
+  </div>
+</div>
 </footer>
 
             </>
@@ -263,6 +268,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   </StrictMode>

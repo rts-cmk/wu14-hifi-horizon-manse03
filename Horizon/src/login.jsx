@@ -59,9 +59,9 @@ const Login = () => {
             <p className="login-box__subtitle">
               Creating an account has many benefits.
             </p>
-            <button className="login-box__create-btn">
+            <Link to="/account" className="login-box__create-btn">
               Create an Account
-            </button>
+            </Link>
           </div>
         </div>
       </section>

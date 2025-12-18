@@ -9,6 +9,8 @@ import AboutUs from './about-us.jsx';
 import ContactUs from './contact-us.jsx';
 import Login from './login.jsx';
 import Account from "./account.jsx";
+import FAQ from "./faq.jsx";
+
 import { 
   FaStripe, 
   FaCcVisa, 
@@ -214,7 +216,7 @@ createRoot(document.getElementById('root')).render(
 
     {/* Column 2: Policies */}
     <div className="footer__column">
-      <Link to="/returns" className="footer__link">Returns & Refunds</Link>
+      <Link to="/faq" className="footer__link">Returns & Refunds</Link>
       <Link to="/delivery" className="footer__link">Delivery</Link>
       <Link to="/privacy" className="footer__link">Privacy Policy</Link>
       <Link to="/terms" className="footer__link">Terms & Conditions</Link>
@@ -269,6 +271,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
     </Router>
   </StrictMode>

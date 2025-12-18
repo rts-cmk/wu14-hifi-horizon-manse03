@@ -21,9 +21,9 @@ const AboutUs = () => {
 
         <div className="history-section">
           <div className="history-block">
-            <img src="/images/picture1.png" alt="Hear The Difference" />
+            <img src="/Images/picture1.png" alt="Hear The Difference" />
             <div className="history-text">
-              <h3>Hear The Difference</h3>
+              <h3>Established in the late 1960s, our family owned business is based in Edinburgh <br /> and Falkirk, but services customers across the UK. </h3>
               <p>
                 Book a demonstration at our Edinburgh or Falkirk showrooms.
                 Would you choose a quality car without a test drive?
@@ -39,11 +39,11 @@ const AboutUs = () => {
                 based in Edinburgh and Falkirk.
               </p>
             </div>
-            <img src="/images/picture2.png" alt="History" />
+            <img src="/Images/picture2.png" alt="History" />
           </div>
 
           <div className="history-block">
-            <img src="/images/picture3.png" alt="Tailored For You" />
+            <img src="/Images/picture3.png" alt="Tailored For You" />
             <div className="history-text">
               <h3>Tailored For You</h3>
               <p>
@@ -60,7 +60,7 @@ const AboutUs = () => {
                 additional services.
               </p>
             </div>
-            <img src="/images/picture4.png" alt="Services" />
+            <img src="/Images/picture4.png" alt="Services" />
           </div>
         </div>
       </div>

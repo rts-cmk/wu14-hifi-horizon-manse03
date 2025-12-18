@@ -10,6 +10,7 @@ import ContactUs from './contact-us.jsx';
 import Login from './login.jsx';
 import Account from "./account.jsx";
 import FAQ from "./faq.jsx";
+import Product from "./product.jsx";
 
 import { 
   FaStripe, 
@@ -272,6 +273,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </Router>
   </StrictMode>

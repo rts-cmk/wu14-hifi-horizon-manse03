@@ -70,7 +70,7 @@
 
   label {
     display: flex;
-    flex-direction: column; // label tekst over input
+    flex-direction: column;
     gap: 0.3rem;
 
     .login-form__label-text {

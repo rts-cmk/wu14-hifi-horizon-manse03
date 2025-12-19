@@ -3,18 +3,49 @@ import './sass/account.scss';
 const Account = () => {
   return (
     <section className="login-page">
-      <h1 className="login-page__title">LOGIN</h1>
+      <h1 className="login-page__title">CREATE AN ACCOUNT</h1>
 
       <div className="login-page__grid">
 
         {/* REGISTERED CUSTOMERS */}
         <div className="login-box">
-          <h2 className="login-box__title">REGISTERED CUSTOMERS</h2>
-          <p className="login-box__subtitle">
-            If you have an account, sign in with your email address.
-          </p>
 
           <form className="login-form">
+            <label>
+              Full name <span>*</span>
+              <input type="email" />
+            </label>
+
+            <label>
+              Address <span>*</span>
+              <input type="address" />
+            </label>
+
+            <label>
+              Address - line 2 <span>*</span>
+              <input type="address" />
+            </label>
+
+            <label>
+              Zip-code <span>*</span>
+              <input type="code" />
+            </label>
+
+            <label>
+              City <span>*</span>
+              <input type="city" />
+            </label>
+
+            <label>
+              Country <span>*</span>
+              <input type="country" />
+            </label>
+
+            <label>
+              Phone number <span>*</span>
+              <input type="tel" />
+            </label>
+
             <label>
               Email <span>*</span>
               <input type="email" />
@@ -22,6 +53,11 @@ const Account = () => {
 
             <label>
               Password <span>*</span>
+              <input type="password" />
+            </label>
+
+            <label>
+              Repeat password <span>*</span>
               <input type="password" />
             </label>
 
@@ -33,12 +69,9 @@ const Account = () => {
             </div>
 
             <button type="submit" className="login-form__btn">
-              Sign in
+              Create an Account
             </button>
 
-            <a href="#" className="login-form__forgot">
-              Forgot your Password?
-            </a>
           </form>
         </div>
 

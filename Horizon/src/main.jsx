@@ -186,7 +186,7 @@ createRoot(document.getElementById('root')).render(
                 </div>
               </section>
 
-              {/* Newsletter under blackbox */}
+              {/* Newsletter*/}
               <section className="newsletter">
                 <div className="newsletter__box">
                   <h2 className="newsletter__title">SIGN UP FOR OUR NEWSLETTER</h2>

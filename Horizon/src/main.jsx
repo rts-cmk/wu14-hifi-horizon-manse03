@@ -273,7 +273,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </Router>
   </StrictMode>
